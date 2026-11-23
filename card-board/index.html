@@ -24,7 +24,7 @@
     <div id="stage"><canvas id="unity-canvas" tabindex="-1"></canvas></div>
     <div id="loading"><h1>마인 (가제)</h1><div id="bar"><div id="fill"></div></div><p id="msg">불러오는 중… 처음에는 시간이 걸립니다</p></div>
     <button id="fs" type="button">전체 화면</button>
-    <script src="Build/WebBuild-cardboard.loader.js"></script>
+    <script src="Build/WebBuild-ma.loader.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) { document.getElementById("warn").style.display = "flex"; }
@@ -36,9 +36,9 @@
       document.getElementById("fs").onclick = function () { var el = document.documentElement; if (document.fullscreenElement) document.exitFullscreen(); else if (el.requestFullscreen) el.requestFullscreen(); };
       createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/WebBuild-cardboard.data.unityweb",
-        frameworkUrl: "Build/WebBuild-cardboard.framework.js.unityweb",
-        codeUrl: "Build/WebBuild-cardboard.wasm.unityweb",
+        dataUrl: "Build/WebBuild-ma.data.unityweb",
+        frameworkUrl: "Build/WebBuild-ma.framework.js.unityweb",
+        codeUrl: "Build/WebBuild-ma.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Mine",
